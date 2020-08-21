@@ -11,7 +11,7 @@ $ [insert command to download here]
 $ unzip StemCellSim.zip
 ```
 
-After unzip, the resulting files are main.cpp, main2.cpp, main3.cpp, StemCellSim.h, StemCellSim.cpp, makefile, tree34cancerous.txt, and tree63cancerous.txt
+After executing the unzip command, the resulting files are main.cpp, main2.cpp, main3.cpp, StemCellSim.h, StemCellSim.cpp, makefile, tree34cancerous.txt, and tree63cancerous.txt
 
 ## Executing StemCellSim with example main files
 
