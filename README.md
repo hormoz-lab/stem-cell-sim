@@ -49,10 +49,12 @@ $ ./sim.x 50
 
 Main3.cpp is used to infer the parameter values from real data. To infer the parameter values from real data (in this case, the real data is contained in tree34cancerous.txt, which is a tree in Newick format that corresponds to the ET2 patient), edit the makefile as before to instead use main3.cpp. The following commands run ABC on the tree and print the inferred parameter values to their corresponding text files.
 
+```
 $ make clean
 $ make
 $ ./sim.x 100
 $ ls
+```
 
 The "./sim.x 100" command can also be terminated by typing CTR c into the command prompt. The corresponding output parameter files will have the number 100 attached to them, and will contain all the points kept for the posterior up until the point of termination.
 
