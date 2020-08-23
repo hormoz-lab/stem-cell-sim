@@ -12,7 +12,7 @@ StemCellSim is supported for _Linux_ and has been tested on the following system
 To install StemCellSim from gitlab, type the following into a command prompt:
 
 ```
-$ git clone https://gitlab.com/hormozlab/stemcellsim
+$ git clone https://gitlab.com/hormozlab/stemcellsim.git
 $ cd stemcellsim
 $ unzip StemCellSim.zip
 ```
@@ -71,7 +71,7 @@ The corresponding output parameter files will have the number 100 attached to th
 
 The following should be done in a high-performance computing environment.
 
-The files ET1_tree.txt and ET2_tree.txt contain the trees corresponding to the ET1 (34 year old) and ET2 (63 year old) patients respectively. To run ABC on the trees, first open the makefile and make sure that every occurence of main.cpp is changed to main3.cpp. Then open main.cpp, and change line 102 to be:
+The files ET1_tree.txt and ET2_tree.txt contain the trees corresponding to the ET1 (34 year old) and ET2 (63 year old) patients respectively. To run ABC on the patient trees in the same way as in the manuscript, first open the makefile and make sure that every occurence of main.cpp is changed to main3.cpp. Then open main.cpp, and change line 102 to be:
 
 ```
 sim.samplePosterior(0.0225, 0, outputFiles);
@@ -123,4 +123,4 @@ sim.readDataAndStoreLTT("ET2_tree.txt",63);
 This change adjusts the code so that the ET2 patient data is instead read into StemCellSim. The ABC inference is then carried out in the exact same way as the ET1 patient data by producing the executable ./sim.x, running the inferences in parralel, and then concatenating the output files.
 
 ## StemCellSim manual
-For a detailed description of the StemCellSim implementation, see StemCellSim_manual.docx
+For a detailed description of the StemCellSim implementation, see the StemCellSim_manual.docx provided.
