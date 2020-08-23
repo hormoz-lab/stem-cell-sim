@@ -17,6 +17,8 @@ $ cd stemcellsim
 $ unzip StemCellSim.zip
 ```
 
+Running these commands should take a matter of seconds. 
+
 After executing the unzip command, the resulting files should be main.cpp, main2.cpp, main3.cpp, StemCellSim.h, StemCellSim.cpp, makefile, ET1_tree.txt, and ET2_tree.txt.
 
 ## Demo: Executing StemCellSim with example main files
