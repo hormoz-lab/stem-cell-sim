@@ -123,9 +123,6 @@ sim.readDataAndStoreLTT("ET2_tree.txt",63);
 This change adjusts the code so that the ET2 patient data is instead read into StemCellSim. The ABC inference is then carried out in the exact same way as the ET1 patient data by producing the executable ./sim.x, running the inferences in parralel, and then concatenating the output files.
 
 ## StemCellSim manual
-For a detailed description of the StemCellSim implementation, see the StemCellSim_manual.docx provided.
-[a link](https://github.com/hormozlab/stemcellsim/StemCellSim_manual.docx)
-[a relative link](StemCellSim_manual.docx)
-![ALT](https://github.com/hormozlab/stemcellsim/StemCellSim_manual.docx)
-![ALT](StemCellSim_manual.docx)
+
+For a detailed description of the StemCellSim program and implementation details, download [StemCellSim_manual.docx](StemCellSim_manual.docx)
 
