@@ -124,3 +124,5 @@ This change adjusts the code so that the ET2 patient data is instead read into S
 
 ## StemCellSim manual
 For a detailed description of the StemCellSim implementation, see the StemCellSim_manual.docx provided.
+[a link](https://github.com/hormozlab/stemcellsim/StemCellSim_manual.docx)
+[a relative link](StemCellSim_manual.docx)
