@@ -117,7 +117,7 @@ sim.samplePosterior(0.0125, 0, outputFiles);
 The change made above narrows the epsilon distance in ABC. Afterwards, the user should change line 94 to be
 
 ```
-sim.readDataAndStoreLTT("ET2_tree.txt",63);
+sim.readDataAndStoreLTT("ET2_tree.txt", 63);
 ```
 
 This change adjusts the code so that the ET2 patient data is instead read into StemCellSim. The ABC inference is then carried out in the exact same way as the ET1 patient data by producing the executable ./sim.x, running the inferences in parralel, and then concatenating the output files.
