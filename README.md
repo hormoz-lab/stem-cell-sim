@@ -40,7 +40,10 @@ $ make
 $ ./sim.x 1 (type ctr c to terminate)
 $ ls
 ```
-This will infer the model parameters from the first data tree, held in the file inputDataFile1.txt. The corresponding output parameter files which contain points sampled from the posterior distribution will have the number 1 attached to them. In particular, when the ls command is executed, the user should see the files nFile1,txt, sFile1.txt, gFile1.txt, LFile1.txt, NFile1.txt, as well as trajFile1.txt LTTFile1.txt. For the first 5 textfiles (nFile1.txt, ... , NFile1.txt), data points are delimited by a ',', while in the last 2 (trajFile1.txt and LTTFile1.txt), the data points are delimited by a '\n'. The first data point of each of these files corresponds to the first point kept by ABC, the second data point of each file correspopnds to the second point kept by ABC, etc. Note that "./sim.x 1" will enumerate the number of points collected by the posterior using cout statements. To terminate the "./sim.x 1" command early, type CTR c into the command prompt. The points kept by the posterior up until the point of termination will be found in the corresponding output files.
+
+This will infer the model parameters from the first data tree, held in the file inputDataFile1.txt. The corresponding output parameter files which contain points sampled from the posterior distribution will have the number 1 attached to them. To terminate the "./sim.x 1" command early, the user must type ctr c into the command prompt. The points kept by the posterior up until the point of termination will be found in the corresponding output files. Note that the "./sim.x 1" command will enumerate the number of points collected by the posterior using cout statements.
+
+When the ls command is executed, the user should see the files nFile1,txt, sFile1.txt, gFile1.txt, LFile1.txt, NFile1.txt, as well as trajFile1.txt LTTFile1.txt. For the first five textfiles (nFile1.txt, ... , NFile1.txt), the data points are delimited by a ',', while in the last two text files (trajFile1.txt and LTTFile1.txt), the data points are delimited by a '\n'. The first data point of each text file corresponds to the first set of parameters kept by ABC, the second data point of each text file corresponds to the second set of parameters kept by ABC, etc.
 
 To infer the model parameters of the second data tree, redo the previous set of commands, but instead type "./sim.x 2" instead of "./sim.x 1". The corresponding output parameter files will have the number 2 attached to them. In general, to infer the model parameters from each data tree simultaneously, it is better to write a script that runs the following commands simultaneously:
 
@@ -58,11 +61,11 @@ main3.cpp is used to infer the parameter values from real data. To infer the par
 ```
 $ make clean
 $ make
-$ ./sim.x 100
+$ ./sim.x 100 (type ctr c to terminate)
 $ ls
 ```
 
-The "./sim.x 100" command can also be terminated by typing CTR c into the command prompt. The corresponding output parameter files will have the number 100 attached to them, and will contain all the points kept for the posterior up until the point of termination.
+The corresponding output parameter files will have the number 100 attached to them, and will contain all the points kept for the posterior up until the point of termination.
 
 ## Reproducing ABC on patient data
 
