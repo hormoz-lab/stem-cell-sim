@@ -3,9 +3,9 @@
 StemCellSim is a program designed to infer the population dynamics of mutated HSCs from lineage trees using ABC (Approximate Bayesian Computation). StemCellSim has the ability to simulate data trees from simulated clonal expansions with or without feedback, and to infer model parameters from real or simulated data trees. 
 
 ## OS requirements
-StemCellSim is supported for _Linux_. It has been tested on the following system:
+StemCellSim is supported for _Linux_ and has been tested on the following system:
      
-     *Linux: CentOS 7.7
+     Linux: CentOS 7.7
 
 ## Installation guide
 
@@ -64,4 +64,5 @@ $ ls
 
 The "./sim.x 100" command can also be terminated by typing CTR c into the command prompt. The corresponding output parameter files will have the number 100 attached to them, and will contain all the points kept for the posterior up until the point of termination.
 
+#Instructions for use
 For a detailed description of the StemCellSim implementation, see StemCellSim_manual.docx
