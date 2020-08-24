@@ -23,7 +23,9 @@ After executing the unzip command, the resulting files should be main.cpp, main2
 
 ## Demo: Executing StemCellSim with example main files
 
-The makefile included is an example makefile that combines main.cpp, StemCellSim.h, and StemCellSim.cpp into an executable called ./sim.x. To instead use main2.cpp (or main3.cpp), one must edit the makefile by changing every occurence of main.cpp to main2.cpp (or main3.cpp).
+Most of the following commands should take a matter of seconds to run. For the commands that do not, we will specify to terminate them after ~10 seconds by typing ctr c into the command prompt.
+
+The makefile included in StemCellSim.zip is an example makefile that combines main.cpp, StemCellSim.h, and StemCellSim.cpp into an executable called ./sim.x. To instead use main2.cpp (or main3.cpp), one must edit the makefile by changing every occurence of main.cpp to main2.cpp (or main3.cpp).
 
 main.cpp is used to produce 50 simulated data trees and stores each of them individually in: inputDataFile1.txt, inputDataFile2.txt, ... , inputDataFile50.txt. These data trees are constructed (and the output files then displayed) by executing the following commands:
 
@@ -31,8 +33,10 @@ main.cpp is used to produce 50 simulated data trees and stores each of them indi
 $ make clean
 $ make
 $ ./sim.x
-$ ls
+$ ls inputDataFile*.txt
 ```
+
+Note that the content of the output files will also be printed to the screen when running the "./sim.x" command.
 
 main2.cpp is used to infer the model parameters from these data trees. To infer the model parameters, first open makefile in a text editor, and change every occurence of main.cpp to main2.cpp. Then run:
 
@@ -45,7 +49,7 @@ $ ls
 
 This will infer the model parameters from the first data tree, held in the file inputDataFile1.txt. The corresponding output parameter files which contain points sampled from the posterior distribution will have the number 1 attached to them. To terminate the "./sim.x 1" command early, the user must type ctr c into the command prompt. The points kept by the posterior up until the point of termination will be found in the corresponding output files. Note that the "./sim.x 1" command will enumerate the number of points collected by the posterior using cout statements.
 
-When the ls command is executed, the user should see the files nFile1,txt, sFile1.txt, gFile1.txt, LFile1.txt, NFile1.txt, as well as trajFile1.txt LTTFile1.txt. For the first five textfiles (nFile1.txt, ... , NFile1.txt), the data points are delimited by a ',', while in the last two text files (trajFile1.txt and LTTFile1.txt), the data points are delimited by a '\n'. The first data point of each text file corresponds to the first set of parameters kept by ABC, the second data point of each text file corresponds to the second set of parameters kept by ABC, etc.
+When the ls command is executed, the user should see the files nFile1,txt, sFile1.txt, gFile1.txt, LFile1.txt, NFile1.txt, as well as trajFile1.txt LTTFile1.txt. For the first five textfiles (nFile1.txt, ... , NFile1.txt), the data points are delimited by a ',', while in the last two text files (trajFile1.txt and LTTFile1.txt), the data points are delimited by a '\n'. The first data point of each text file corresponds to the first set of parameters kept by ABC, the second data point of each text file corresponds to the second set of parameters kept by ABC, etc. Note that each text file individually contains only marginal posterior information about a specific paramater (as indicated by their names), but the text files collectively preserve the joint posterior information. It is highly recommended that the user opens some of these text files to ensure that the data are in the format described.
 
 To infer the model parameters of the second data tree, redo the previous set of commands, but instead type "./sim.x 2" instead of "./sim.x 1". The corresponding output parameter files will have the number 2 attached to them. In general, to infer the model parameters from each data tree simultaneously, it is better to write a script that runs the following commands simultaneously:
 
