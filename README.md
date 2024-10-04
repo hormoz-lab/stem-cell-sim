@@ -9,10 +9,10 @@ StemCellSim is supported for _Linux_ and has been tested on the following system
 
 ## Installation guide
 
-To install StemCellSim from gitlab, type the following into a linux command prompt:
+To install StemCellSim from github, type the following into a linux command prompt:
 
 ```
-$ git clone https://github.com/hormozlab/stem-cell-sim.git
+$ git clone https://github.com/hormoz-lab/stem-cell-sim.git
 $ cd stemcellsim
 $ unzip StemCellSim.zip
 ```
